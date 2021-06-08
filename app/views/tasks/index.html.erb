@@ -1,11 +1,13 @@
-<h1>Here are all your tasks:</h1>
+<div class="container text-center">
+  <h1>Here are all your tasks:</h1>
 
-<ul>
-  <% @tasks.each do |task| %>
-  <li>
-    <%= link_to "#{task.title}", task_path(task) %> - <%= task.details %> - <%= task.completed %> - <%= task.important %>
-  </li>
-  <% end %>
-</ul>
+  <ul class="list-group list-group-flush">
+    <% @tasks.each do |task| %>
+    <li class="list-group-item">
+      <%= link_to "#{task.title}", task_path(task) %> - <%= task.details %> - <%= task.completed %> - <%= task.important %>
+    </li>
+    <% end %>
+  </ul>
 
-<%= link_to "Create a new task", tasks_new_path  %>
+  <%= link_to "Create a new task", tasks_new_path, class: "btn btn-outline-success btn-lg mt-2"  %>
+</div>

@@ -1,7 +1,10 @@
-<h1> <%= @task.title %> </h1>
 
-<h2> <%= @task.details %> </h2>
+<div class="container text-center">
+  <h1> <%= @task.title %> </h1>
 
-<p> <%= @task.completed %> - <%= @task.important %> </p>
+  <h2> <%= @task.details %> </h2>
 
-<%= link_to "Back to your list", tasks_path %> - <%= link_to "Edit", edit_path %> - <%= link_to "Delete", task_path(@task), method: :delete, data: { confirm: "Are you sure?"}   %>
+  <p> <%= @task.completed %> - <%= @task.important %> </p>
+
+  <%= link_to "Back to your list", tasks_path %> - <%= link_to "Edit", edit_path %> - <%= link_to "Delete", task_path(@task), method: :delete, data: { confirm: "Are you done with this task?"}   %>
+</div>
