@@ -3,8 +3,11 @@ Rails.application.routes.draw do
   # Read
   get 'tasks', to: 'tasks#index', as: :tasks
 
-  # Create
+  get 'tasks/new', to: 'tasks#new'
+
   get 'tasks/:id', to: 'tasks#show', as: :task
+
+  # Create
 
   # Update
 
