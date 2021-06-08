@@ -1,0 +1,9 @@
+<h1>Here are all your tasks:</h1>
+
+<ul>
+  <% @tasks.each do |task| %>
+  <li>
+    <%=  task.title %> - <%= task.details %> - <%= task.completed %> - <%= task.important %>
+  </li>
+  <% end %>
+</ul>
