@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'tasks', to: 'tasks#index', as: :tasks
 
   # Create
+  get 'tasks/:id', to: 'tasks#show', as: :task
 
   # Update
 
